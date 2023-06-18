@@ -1,0 +1,83 @@
+{% extends 'basic.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}Personal Info{% endblock title%}</title>
+
+</head>
+<body>
+  {%block body%}
+      <h1>Student Personal Information  </h1>
+      <br>
+    <!-- <table>
+        
+        <tr>
+          <li>Enrollment Number </li>
+          <li>First Name</li> 
+          <li>Second Name</li> 
+          <li>Gender</li> 
+          <li> Email Address</li> 
+          <li> Date Of Birth</li> 
+          <li> Branch</li> 
+          <li> Father's Name</li> 
+          <li> Address</li> 
+          <li> Mother's Name</li> 
+          <li>Total Years</li> 
+          
+        </tr>
+        <tr>
+          <td>{{roll_no}}</td>
+         <td>{{first_name}}</td>
+         <td>{{second_name}}</td>
+         <td>{{gender}}</td>
+         <td>{{email}}</td>
+         <td>{{dob}}</td>
+         <td>{{branch}}</td>
+         <td>{{father}}</td>
+         <td>{{address}}</td>
+         <td>{{mother}}</td>
+         <td>{{total}}</td>
+        </tr>
+      </table> -->
+<div class="abc">
+
+  <ul     style="display: block;
+ 
+  color: rgb(53, 45, 45);
+
+  font-size:20px;
+  "
+      
+    
+ >
+    <li style="margin:2px;padding:2px">Enrollment Number : {{roll_no}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      <li style="margin:2px;padding:2px">First Name : {{first_name}} &nbsp;&nbsp;&nbsp;&nbsp; </li> 
+      <li style="margin:2px;padding:2px">Second Name : {{second_name}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      <li style="margin:2px;padding:2px">Gender : {{gender}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      <li style="margin:2px;padding:2px"> Email Address :{{email}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px"> Date Of Birth :{{dob}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px"> Branch :{{branch}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px"> Father's Name : {{father}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px"> Address : {{address}} &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px"> Mother's Name : {{mother}}  &nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      <li style="margin:2px;padding:2px">Total Years : {{total}}&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      <li style="margin:2px;padding:2px">Semester: {{semester}}&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      
+      
+      </ul>
+</div >
+
+      
+          
+      {% endblock body%}
+</body>
+</html>

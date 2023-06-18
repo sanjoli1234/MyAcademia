@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change password</title>
+<style>
+    *{
+        background-color: rgb(207, 207, 98);
+    }
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+    
+        border-radius: 10px;
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    
+    }
+    .btn{
+        padding:1px;
+        margin:10px;
+        width:20%;
+        border-radius: 10px;
+        
+        margin-left: 35%;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <form action="respond" method="post" class="center">
+      {%csrf_token%}
+        <div class="form-group">
+          <label for="email">Username</label>
+          <input type="text" class="form-control" name="username" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Old Password</label>
+          <input type="password" class="form-control" placeholder ="Old" name="oldp" id="pwd">
+        </div>
+        <div class="form-group">
+            <label for="pwd">New Password</label>
+            <input type="password" class="form-control" placeholder="new" name="newp" id="pwd">
+          </div>
+        <button type="submit" class="btn btn-default">Change</button>
+      </form>
+      
+</body>
+</html>

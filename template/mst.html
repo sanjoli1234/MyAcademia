@@ -1,0 +1,41 @@
+{% extends 'basic.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}MST{% endblock title%}</title>
+
+</head>
+<body>
+  {%block body%}
+      <h1>MST MARKS</h1>
+      <br>
+    <table>
+        
+        <tr>
+          <td>COURSE CODE &nbsp;&nbsp;</td>
+          <td>MAXIMUM MARKS &nbsp;&nbsp;</td> 
+          <td>OBTAINED MARKS &nbsp;&nbsp;</td> 
+         
+       
+          
+        </tr>
+        {% for i in ll %}
+        <tr>
+                             
+           <td>{{ i.course_code }}  &nbsp;&nbsp;</td>
+           <td>{{ i.max_marks }}  &nbsp;&nbsp;</td>
+           <td>{{ i.obtain_marks }}  &nbsp;&nbsp;</td>
+          
+        </tr>
+    {% endfor %}
+      
+      </table>
+
+      
+          
+      {% endblock body%}
+</body>
+</html>

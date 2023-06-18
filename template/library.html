@@ -1,0 +1,47 @@
+{% extends 'basic.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}library{% endblock title%}</title>
+
+</head>
+<body>
+  {%block body%}
+      <h1>Book Issue Details</h1>
+      <br>
+    <table>
+        
+        <tr>
+          <td>BOOK ID  &nbsp;&nbsp;</td>
+          <td>BOOK NAME  &nbsp;&nbsp;</td> 
+          <td>ISSUE DATE  &nbsp;&nbsp;</td> 
+          <td>DUE DATE  &nbsp;&nbsp;</td> 
+          <td>RETURN DATE  &nbsp;&nbsp;</td> 
+          <td>FINE  &nbsp;&nbsp;</td> 
+          <td>FINE PAID  &nbsp;&nbsp;</td> 
+       
+          
+        </tr>
+        {% for i in l %}
+        <tr>
+                             
+           <td>{{ i.book_id }}  &nbsp;&nbsp;</td>
+           <td>{{ i.book_name }}  &nbsp;&nbsp;</td>
+           <td>{{ i.issue_date }}  &nbsp;&nbsp;</td>
+           <td>{{ i.due_date }}  &nbsp;&nbsp;</td>
+           <td>{{ i.return_date }}  &nbsp;&nbsp;</td>
+           <td>{{ i.fine }}  &nbsp;&nbsp;</td>    
+           <td>{{ i.fine_paid }}  &nbsp;&nbsp;</td>    
+        </tr>
+    {% endfor %}
+      
+      </table>
+
+      
+          
+      {% endblock body%}
+</body>
+</html>

@@ -1,0 +1,37 @@
+{%extends 'basic.html'%}
+{% block content%}
+
+
+
+{% endblock%}
+<h1>try</h1>
+
+
+
+def change(request):
+    return render(request,'changepasswd.html')
+def respond(request):
+    if request.method == 'POST':
+        user = request.POST['username']
+        opasswd = request.POST['oldp']
+        npasswd = request.POST['newp']
+        if user.isnumeric():
+            global id
+            
+            cur=conn.cursor()
+            cur.execute('Select * from login where username={} and password={}'.format(id,opasswd))
+            
+            if cur.fetchone():
+                cur.execute('update login set password={} where username={} and password={}'.format(npasswd,user,opasswd))
+                messages.info(request,"Password Changed")
+                return redirect("/")
+            else:
+                messages.info(request,"Invaid details")
+                return redirect("/")
+    
+        else:
+            messages.info(request,"Invaid details")
+            return redirect("/")
+
+
+# Create your views here.
